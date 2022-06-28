@@ -1,0 +1,10 @@
+[package]
+name = "simple-dmenu"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "A simple macro to call dmenu"
+repository = "https://github.com/DumbMahreeo/simple-dmenu"
+
+
+[dependencies]
