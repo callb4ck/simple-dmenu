@@ -6,7 +6,7 @@ A macro to call dmenu from rust
 ### Standard
 Requires every argument to implement `.as_bytes()`.
 Might also not need to pass any arguments at all
-```
+```rust
 use simple_dmenu::dmenu;
 
 // Example
@@ -16,7 +16,7 @@ let output = dmenu!("1", "2", "3");
 ### Stringify
 Same as standard but passes every argument to `stringify!()`.
 Again, might also not need to pass any arguments at all
-```
+```rust
 use simple_dmenu::dmenu;
 
 // Example
@@ -26,7 +26,7 @@ let output = dmenu!(stringify 1, 2, 3);
 ### Iter
 Accepts an iterator.
 Every value yielded by the iterator needs to implement `.as_bytes()`
-```
+```rust
 use simple_dmenu::dmenu;
 
 // Example
@@ -38,7 +38,7 @@ let output = dmenu!(iter a);
 
 ### Prompt
 Only shows a prompt with the specified prompt text
-```
+```rust
 use simple_dmenu::dmenu;
 
 // Example
@@ -47,7 +47,7 @@ let username = dmenu!(prompt "What's your name?");
 
 ### Optional arguments
 You can specify optional arguments to pass to dmenu by separating them with `; args`
-```
+```rust
 use simple_dmenu::dmenu;
 
 // Example
@@ -56,7 +56,7 @@ let output = dmenu!(stringify 1, 2, 3; args "-p", "Choose a number", "-l", "3");
 
 ### Arguments only
 Empty call, only allows to specify arguments to pass on to dmenu
-```
+```rust
 use simple_dmenu::dmenu;
 
 // Example
